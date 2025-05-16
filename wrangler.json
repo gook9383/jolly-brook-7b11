@@ -1,0 +1,16 @@
+{
+  "compatibility_date": "2025-04-01",
+  "main": "src/index.ts",
+  "name": "jolly-brook-7b11",
+  "upload_source_maps": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "3898b17f-00fe-4158-8297-fae0df405975",
+      "database_name": "vendly_db"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
