@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vendly Machine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .spinner { border:3px solid rgba(255,255,255,0.2); border-top:3px solid white; border-radius:50%; width:1rem;height:1rem; animation:spin .6s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg) } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-900 to-indigo-700 text-white font-sans antialiased">
+  <header class="flex items-center justify-between p-4 bg-indigo-800 bg-opacity-50 mb-4">
+    <h1 class="font-Archivo Black text-2xl">Vendly</h1>
+    <div class="space-x-4">
+      <button id="loginBtn" class="px-6 py-2 bg-white text-black rounded-lg">Login</button>
+      <button id="registerBtn" class="px-6 py-2 bg-white text-black rounded-lg">Register</button>
+    </div>
+  </header>
+  <div class="max-w-5xl mx-auto p-4">
+    <div id="pointsDisplay" class="text-right mb-4 text-lg"></div>
+    <h2 class="text-center text-3xl mb-6">Our Products</h2>
+    <div id="productGrid" class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+  </div>
+  <!-- Modals and toasts would go here similar to prior code -->
+  <script>
+    // Front-end logic: auth, product grid, updatePoints(), purchase calls /create-checkout-session
+  </script>
+</body>
+</html>
