@@ -1,0 +1,30 @@
+# wrangler.toml
+
+# 1) Your project name
+name = "jolly-brook-7b11"
+
+# 2) When to enable modern Workers syntax
+compatibility_date = "2025-05-16"
+
+# 3) Where your Worker entrypoint lives
+#    If you’re using TypeScript in src/index.ts, point here; otherwise rename server.js → worker.js and point to that.
+main = "src/index.ts"
+
+[build]
+# Installs your deps so KV asset handler, stripe, etc. are available
+command = "npm install"
+# Tells Pages where to find your Functions
+functions = "./"
+
+# 4) Your D1 binding (Cloudflare auto-generated database_id, matches your vendly_db)
+[[d1_databases]]
+binding       = "DB"
+database_id   = "3898b17f-00fe-4158-8297-fae0df405975"
+database_name = "vendly_db"
+
+# 5) Any env vars you need at runtime
+[vars]
+STRIPE_SECRET_KEY = "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"
+
+[observability]
+enabled = true
